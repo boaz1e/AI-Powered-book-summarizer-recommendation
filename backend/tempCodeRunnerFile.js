@@ -1,0 +1,1 @@
+const openai = new OpenAI();
