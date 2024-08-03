@@ -21,12 +21,20 @@ const BookSearch = ({ onSearch }) => {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchBooks();
+    }
+  };
+
   return (
     <div className="search-section">
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={handleKeyDown}
         placeholder="Search for books..."
       />
       <button onClick={searchBooks}>Search</button>
