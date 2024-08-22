@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 // Initialize OpenAI with the API key
 const openai = new OpenAI({
   apiKey:
-    "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",
+    "",
 });
 
 // Middleware to parse JSON request bodies
